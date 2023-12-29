@@ -270,7 +270,8 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-api-server:
-    image: airbyte/airbyte-api-server:${VERSION}
+    # image: airbyte/airbyte-api-server:${VERSION}
+    image: airbyte/airbyte-api-server:0.50.40
     logging: *default-logging
     container_name: airbyte-api-server
     restart: unless-stopped
@@ -318,7 +319,8 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-proxy:
-    image: airbyte/proxy:${VERSION}
+    # image: airbyte/proxy:${VERSION}
+    image: airbyte/proxy:0.50.40
     container_name: airbyte-proxy
     restart: unless-stopped
     ports:
